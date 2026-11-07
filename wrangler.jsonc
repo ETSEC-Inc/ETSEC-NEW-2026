@@ -1,5 +1,5 @@
 {
-  "name": "etsecinc-com-2026-live",
+  "name": "etsec-new-2026",
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-10-28",
   "compatibility_flags": [
@@ -12,7 +12,7 @@
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",
-      "service": "etsecinc-com-2026-live"
+      "service": "etsec-new-2026"
     },
     {
       "binding": "ACADEMY_WORKER",
