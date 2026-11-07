@@ -1,0 +1,13 @@
+import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import Link from "next/link";
+import Icon from "@/components/Icon";
+import ScrollReveal from "@/components/ScrollReveal";
+import { site } from "@/lib/site";
+export const metadata: Metadata = pageMetadata("Insights & Resources", "Practical resources from ETSEC on security, engineering and applied artificial intelligence.", "/updates");
+const resources = [
+  { name: "A security-first mindset", category: "CYBERSECURITY", icon: "shield" as const, text: "Practical security starts with understanding critical assets, identifying exposure and building security into delivery workflows.", href: "/services/cyber-security" },
+  { name: "Building for the long term", category: "ENGINEERING", icon: "code" as const, text: "Usable interfaces, resilient architecture and thoughtful deployment decisions make digital products easier to evolve.", href: "/services/web-development" },
+  { name: "AI with a clear purpose", category: "APPLIED AI", icon: "brain" as const, text: "Effective AI work begins with a defined problem, appropriate data and realistic evaluation—not a model choice.", href: "/services/ai-development" },
+];
+export default function Updates() { return <main><section className="page-hero"><div className="page-hero-glow"/><div className="container-wide"><nav className="breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><span aria-current="page">Insights</span></nav><span className="eyebrow"><span className="eyebrow-line"/> IDEAS & PERSPECTIVES</span><h1>Think ahead.<br/><span className="text-gradient">Keep learning.</span></h1><p className="page-lead">A few principles behind how we approach cybersecurity, software and intelligent systems.</p></div></section><section className="section"><div className="container-wide"><div className="insights-grid">{resources.map((item,i)=><ScrollReveal key={item.name} delay={i*70}><Link href={item.href} className="insight-card"><span className="insight-icon"><Icon name={item.icon} size={29}/></span><span className="eyebrow">{item.category}</span><h2>{item.name}</h2><p>{item.text}</p><span className="text-link">Explore this capability <Icon name="arrow-up-right" size={18}/></span></Link></ScrollReveal>)}</div><div className="insights-end"><div><h2>Practical learning, beyond the page.</h2><p>Discover training across cybersecurity, web development and AI at ETSEC Academy.</p></div><a href={site.academy} className="btn btn-outline" target="_blank" rel="noopener noreferrer">Explore Academy <Icon name="arrow-up-right" size={18}/></a></div></div></section></main>; }

@@ -1,0 +1,25 @@
+{
+  "name": "etsecinc-com-2026-live",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-28",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "etsecinc-com-2026-live"
+    },
+    {
+      "binding": "ACADEMY_WORKER",
+      "service": "etsec-academy-live"
+    }
+  ],
+  "images": {
+    "binding": "IMAGES"
+  }
+}
