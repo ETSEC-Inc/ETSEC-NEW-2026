@@ -41,7 +41,71 @@ export default function Home() {
       <div className="hero-bottom-line" aria-hidden="true"><span/></div>
     </section>
 
-    <section className="trust-strip"><div className="container-wide"><div className="trust-topline"><span>WORKING ACROSS INDUSTRIES</span><span className="trust-line"/><span>SELECTED CLIENTS & COLLABORATORS</span></div><div className="client-logos"><div className="client-logo"><Image src="/companies/adam-seeds-logo.webp" alt="Adam Seeds" width={148} height={70}/></div><div className="client-logo"><Image src="/companies/east-seeds-logo.webp" alt="East Agri" width={148} height={70}/></div><div className="client-logo"><Image src="/companies/Agriwork-svg.svg" alt="Agriwork" width={148} height={70}/></div><div className="client-logo"><Image src="/companies/winsanto-crop-science-logo.jpeg" alt="Winsanto Crop Science" width={148} height={70}/></div></div></div></section>
+    
+<section className="trust-strip">
+  <div className="container-wide">
+    <div className="trust-topline">
+      <span>WORKING ACROSS INDUSTRIES</span>
+      <span className="trust-line" />
+      <span>SELECTED CLIENTS & COLLABORATORS</span>
+    </div>
+
+    <div className="client-logos">
+      {/* Existing Logos */}
+      <div className="client-logo adam-logo">
+  <Image
+    src="/companies/adam-seeds-logo.webp"
+    alt="ADAM Seeds"
+    width={200}
+    height={110}
+    unoptimized
+  />
+</div>
+
+      <div className="client-logo">
+        <Image src="/companies/east-seeds-logo.webp" alt="East Agri Seeds" width={148} height={70} />
+      </div>
+
+      <div className="client-logo">
+        <Image src="/companies/Agriwork-svg.svg" alt="Agriwork" width={148} height={70} />
+      </div>
+
+      <div className="client-logo">
+        <Image src="/companies/winsanto-crop-science-logo.webp" alt="Winsanto Crop Science" width={148} height={70} />
+      </div>
+
+      {/* New Collaboration Logos */}
+      <div className="client-logo">
+        <Image src="/partners/Aerohive-Logo.webp" alt="Aerohive Pvt Ltd" width={148} height={70} />
+      </div>
+
+      <div className="client-logo">
+        <Image src="/partners/arishna-IoT-Solutions.webp" alt="Arishma IoT Solutions" width={148} height={70} />
+      </div>
+
+      <div className="client-logo student-nation-logo">
+  <Image
+    src="/partners/Student Nation Logo.jpeg"
+    alt="Student Nation"
+    width={148}
+    height={70}
+  />
+</div>
+
+<div className="client-logo">
+  <Image
+    src="/partners/classplus-logo.webp"
+    alt="Classplus"
+    width={190}
+    height={85}
+    unoptimized
+  />
+</div>
+
+    </div>
+  </div>
+</section>
+
 
     <section className="section section-services" id="services"><div className="container-wide"><ScrollReveal><div className="section-heading split-heading"><div><span className="eyebrow"><span className="eyebrow-line"/> OUR CAPABILITIES</span><h2>One partner.<br/><span className="text-gradient">More possibilities.</span></h2></div><div className="section-side"><p>From strengthening your security posture to delivering transformative digital products, we bring the right disciplines together.</p><Link href="/services" className="text-link">Explore all services <Icon name="arrow-up-right" size={18}/></Link></div></div></ScrollReveal>
       <div className="service-grid">{services.map((s,i)=><ScrollReveal key={s.slug} delay={(i%2)*90}><Link href={`/services/${s.slug}`} className={`service-card service-card-${i+1}`}><div className="service-card-top"><span className="service-icon"><Icon name={s.icon} size={27}/></span><span className="service-number">{s.number} / 04</span></div><div className="service-card-body"><span className="service-overline">{s.short}</span><h3>{s.title}</h3><p>{s.description}</p></div><div className="service-card-bottom"><span className="tag-list">{s.tags.slice(0,2).map(tag=><span key={tag}>{tag}</span>)}</span><span className="service-arrow"><Icon name="arrow-up-right" size={20}/></span></div></Link></ScrollReveal>)}</div>

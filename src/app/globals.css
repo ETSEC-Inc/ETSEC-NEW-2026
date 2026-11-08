@@ -678,3 +678,62 @@ html[data-theme="light"] .btn-primary:hover { background:#056960; }
   *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; transition-duration:.01ms!important; }
   .reveal-block { opacity:1!important; transform:none!important; }
 }
+
+/* Collaboration Logos — Professional Styling */
+
+.client-logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: center;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.client-logo,
+.client-logo.student-nation-logo,
+.client-logo.adam-logo {
+  width: 100%;
+  min-height: 125px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e8edf2;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.client-logo img {
+  width: 100% !important;
+  max-width: 190px !important;
+  height: 85px !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  mix-blend-mode: normal !important;
+}
+
+@media (max-width: 900px) {
+  .client-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .client-logos {
+    gap: 12px;
+  }
+
+  .client-logo {
+    min-height: 105px;
+    padding: 12px;
+  }
+
+  .client-logo img {
+    height: 60px !important;
+  }
+}
