@@ -83,15 +83,6 @@ export default function Home() {
         <Image src="/partners/arishna-IoT-Solutions.webp" alt="Arishma IoT Solutions" width={148} height={70} />
       </div>
 
-      <div className="client-logo">
-  <Image
-    src="/partners/Student-Nation-Logo.jpeg"
-    alt="Student Nation"
-    width={148}
-    height={70}
-  />
-</div>
-
 <div className="client-logo">
   <Image
     src="/partners/classplus-logo.webp"
@@ -100,7 +91,11 @@ export default function Home() {
     height={85}
     unoptimized
   />
+
+
 </div>
+
+
 
     </div>
   </div>
